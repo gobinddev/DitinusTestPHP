@@ -50,7 +50,7 @@ class AuthController extends Controller
             return  returnResponse(false,  'Invalid login credentials', []);
         }
 
-        return  returnResponse(true, 'User Registered Successfully', ['token' => $token,  'user' => auth()->user()]);
+        return  returnResponse(true, 'User login Successfully', ['token' => $token,  'user' => auth()->user()]);
     }
 
     public function userInfo()

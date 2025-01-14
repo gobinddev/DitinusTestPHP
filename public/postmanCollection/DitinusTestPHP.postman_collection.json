@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "da32466f-e300-4328-8c92-60ad19ff6e7d",
+		"name": "DitinusTestPHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31971205"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "apiuser",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "apiuser@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}register",
+					"host": [
+						"{{baseUrl}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "apiuser",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "apiuser@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}login",
+					"host": [
+						"{{baseUrl}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0xhcmF2ZWwvRGl0aW51c1Rlc3RQSFAvcHVibGljL2FwaS9sb2dpbiIsImlhdCI6MTczNjg3NzU4OSwiZXhwIjoxNzM2ODgxMTg5LCJuYmYiOjE3MzY4Nzc1ODksImp0aSI6IkxsbWRkSjBTMWQzNEY5amoiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wyVdtdppQlD64ztpWv8XjGONxJi1kRdLcKL8OkLekxQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "apiuser",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "apiuser@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}userInfo",
+					"host": [
+						"{{baseUrl}}userInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost/Laravel/DitinusTestPHP/public/api/",
+			"type": "string"
+		}
+	]
+}
